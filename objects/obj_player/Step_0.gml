@@ -28,8 +28,14 @@ if (vx == 0 && vy == 0) {
 }
 // If moving
 if (vx != 0 || vy != 0) {
-	x += vx;
-	y += vy;
+	if !collision_point(x+vx,y,obj_border,true,true)
+	{
+		x += vx;
+	}
+	if !collision_point(x,y+vy,obj_border,true,true)
+	{
+		y += vy;
+	}
 	// Change walking Sprite based on direction
 	if (vx > 0) {
 		sprite_index = spr_player_walk_right;
