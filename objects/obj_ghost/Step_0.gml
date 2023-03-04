@@ -61,6 +61,6 @@ if (visible)
 }
 else
 {
-	x = random(1920);
-	y = random(1080);
+	x = random(7680);
+	y = random(3240);
 }
